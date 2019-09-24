@@ -1,0 +1,37 @@
+#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+  string collection;
+  string name;
+  string address;
+  string phoneNumber;
+  int totalCost=0;
+  bool collectionLoop=true;
+
+  while (collectionLoop==true){
+    collectionLoop=false;
+    cout<<"Is it for delivery (D) or pickup (P)? ";
+    cin>>collection;
+    if (collection=="D" || collection=="d"){
+      cout<<"What is the customers name? ";
+      cin>>name;
+      cout<<"What is the customers address? ";
+      cin>>address;
+      cout<<"What is the customers phone number? ";
+      cin>>phoneNumber;
+      totalCost=(totalCost+3);
+    }
+    else if (collection=="P" || collection=="p"){
+      cout<<"What is the customers name? ";
+      cin>>name;
+    }
+    else{
+      cout<<"Invalid data entry. ";
+      collectionLoop=true;
+    }
+  }
+  cout<<"Name: "<<name<<endl<<"Address: "<<address<<endl<<"Phone Number: "<<phoneNumber<<endl<<"Total Cost: "<<totalCost;
+}
